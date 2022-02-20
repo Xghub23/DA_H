@@ -1,3 +1,3 @@
 import os
-os.system('python browser.py')
+os.system('py browser.py')
 
