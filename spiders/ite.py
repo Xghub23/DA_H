@@ -1,4 +1,5 @@
 import scrapy
+import json
 
 
 class IteSpider(scrapy.Spider):
@@ -24,3 +25,13 @@ class IteSpider(scrapy.Spider):
             # }'''
             # decoded = json.loads(a)
             # img = scrapy.urlopen(decoded.imageUrl).read()
+
+with open('results.json', 'r') as f:
+    f = '''{
+      'imageUrl': '/images/image.jpg',
+      'imageName': 'My Image'  
+    }'''
+    results_dict = json.load(f)
+
+for results in results_dict:
+    print(results['Name'])

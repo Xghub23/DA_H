@@ -1,7 +1,7 @@
 # Use the Request library
 import requests
 # Set the target webpage
-url = 'http://www.webcode.me'
+url = 'http://www.ite.edu.sg/'
 r = requests.get(url)
 # This will get the full page
 print(r.text)
