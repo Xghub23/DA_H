@@ -1,8 +1,10 @@
 import unittest
+from spiders import ite
 
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
+class TestIteSpider(unittest.TestCase):
+    def test_parse(self):
+        result = ite.parse()
         self.assertEqual(True, False)  # add assertion here
 
 
