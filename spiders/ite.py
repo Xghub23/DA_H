@@ -32,6 +32,7 @@ with open('results.json', 'r') as f:
       'imageName': 'My Image'  
     }'''
     results_dict = json.load(f)
+    img = scrapy.urlopen(results_dict.imageUrl).read()
 
 for results in results_dict:
     print(results['Name'])
