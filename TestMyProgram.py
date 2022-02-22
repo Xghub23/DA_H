@@ -1,4 +1,7 @@
 import unittest
+
+import scrapy
+
 from spiders import ite
 
 
