@@ -1,14 +1,10 @@
 import unittest
-
-import scrapy
-
-from spiders import ite
+import browser as main
 
 
 class TestIteSpider(unittest.TestCase):
-    def test_parse(self):
-        result = ite.parse()
-        self.assertEqual(True, False)  # add assertion here
+    def test_request(self):
+        main.url = 'http://www.webcode.me'
 
 
 if __name__ == '__main__':
