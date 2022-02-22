@@ -4,7 +4,7 @@ import browser as main
 
 class TestIteSpider(unittest.TestCase):
     def test_request(self):
-        main.url = 'http://www.webcode.me'
+        main.url = 'http://www.ite.edu.sg/'
 
 
 if __name__ == '__main__':
