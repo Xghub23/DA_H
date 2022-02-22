@@ -12,9 +12,15 @@ class IteSpider(scrapy.Spider):
         next_page = response.css(Page_selector).extract_first()
         if next_page:
             yield scrapy.Request(response.urljoin(next_page),callback=self.parse)
-        css_selector = 'img'
+        css_selector = 'jpg'
         for x in response.css(css_selector):
             newsel = '@src'
             yield {
                 'image Link': x.xpath(newsel).extract_first(),
             }
+            # a = '''{
+            #     'imageUrl':'/images/image.jpg',
+            #     'imageName': 'My Image'
+            # }'''
+            # decoded = json.loads(a)
+            # img = scrapy.urlopen(decoded.imageUrl).read()
